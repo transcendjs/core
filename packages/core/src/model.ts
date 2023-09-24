@@ -1,5 +1,4 @@
-
-import type { Resource } from "@transcend/resource"
+import type { Resource } from '@transcend/resource'
 
 export type Domain = string & { __tag: 'domain' }
 export type Account = string & { __tag: 'account' }
@@ -17,7 +16,7 @@ export interface Obj {
 
 export interface Doc extends Obj {
   _id: Ref<this>
-  space: Ref<Space> 
+  space: Ref<Space>
   modifiedOn: Timestamp
   modifiedBy: Account
   createdOn: Timestamp

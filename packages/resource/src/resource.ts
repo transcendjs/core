@@ -1,4 +1,7 @@
-
+//
+// © 2023 Hardcore Engineering, Inc. All Rights Reserved.
+// Licensed under the Eclipse Public License v2.0 (SPDX: EPL-2.0).
+//
 
 export type Plugin = string & { __tag: 'plugin' }
 
@@ -32,16 +35,17 @@ const PRI_SEPARATOR = ':'
 
 type Strings = Record<string, string | Record<string, string>>
 
-function identify (prefix: string, src: Strings) {
+function identify(prefix: string, src: Strings) {
   const res: Strings = {}
   for (const key in src) {
     const value = src[key]
     const ident = prefix + PRI_SEPARATOR + key
-    res[key] = typeof value === 'string' ? ident : identify(ident, value) as Record<string, string>
+    res[key] =
+      typeof value === 'string' ? ident : (identify(ident, value) as Record<string, string>)
   }
   return res
 }
 
-export function resources<R extends Resources> (plugin: Plugin, resources: R): Readonly<R> {
+export function resources<R extends Resources>(plugin: Plugin, resources: R): Readonly<R> {
   return identify(plugin, resources) as R
 }

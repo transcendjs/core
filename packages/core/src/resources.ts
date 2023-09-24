@@ -1,5 +1,3 @@
-
-
 import type { Plugin } from '@transcend/resource'
 import { resources } from '@transcend/resource'
 import type { PRef, Obj, Class } from './model'
@@ -12,4 +10,3 @@ const r = resources(plugin, {
     Class: '' as PRef<Class<Class<Obj>>>
   }
 })
-
