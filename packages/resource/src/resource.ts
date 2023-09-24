@@ -40,8 +40,7 @@ function identify(prefix: string, src: Strings) {
   for (const key in src) {
     const value = src[key]
     const ident = prefix + PRI_SEPARATOR + key
-    res[key] =
-      typeof value === 'string' ? ident : (identify(ident, value) as Record<string, string>)
+    res[key] = typeof value === 'string' ? ident : (identify(ident, value) as Record<string, string>)
   }
   return res
 }

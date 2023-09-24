@@ -10,6 +10,8 @@ export type PRef<T extends Doc> = Ref<T> & Resource<Ref<T>> // Persistent Refere
 export type Primitive = boolean | number | string | Domain | Account | Timestamp | Ref<Doc>
 export type PrimitiveArray<T extends Primitive> = T[]
 
+export const DomainModel = 'model' as Domain
+
 export interface Obj {
   _class: Ref<Class<this>>
 }
