@@ -14,8 +14,8 @@ export type Plugin = string & { __tag: 'plugin' }
  *
  * @example
  * ```typescript
- *   `core.string.ClassLabel` as PRI<string> // translated string according to current language and i18n settings
- *   `workbench.icon.Add` as PRI<URL> // URL to SVG sprites
+ *   `core.string.ClassLabel` as Resource<string> // translated string according to current language and i18n settings
+ *   `workbench.icon.Add` as Resource<URL> // URL to SVG sprites
  * ```
  *
  * @public

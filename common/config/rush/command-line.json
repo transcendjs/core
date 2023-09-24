@@ -11,6 +11,12 @@
    * "rush my-global-command --help".
    */
   "commands": [
+    {
+      "commandKind": "bulk",
+      "name": "format",
+      "summary": "Format source code",
+      "enableParallelism": true
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom command.
