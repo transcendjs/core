@@ -1,0 +1,27 @@
+{
+  "name": "@transcend/model",
+  "version": "1.0.0",
+  "description": "Transcend Model Package",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/transcendjs/transcend.git"
+  },
+  "author": "Hardcore Engineering, Inc.",
+  "license": "EPL-2.0",
+  "bugs": {
+    "url": "https://github.com/transcendjs/transcend/issues"
+  },
+  "homepage": "https://github.com/transcendjs/transcend#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@transcend/core": "workspace:*"
+  }
+}
